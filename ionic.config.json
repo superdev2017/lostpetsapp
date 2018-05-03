@@ -1,6 +1,6 @@
 {
   "name": "LostPets",
-  "app_id": "",
+  "app_id": "b3f8652d",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

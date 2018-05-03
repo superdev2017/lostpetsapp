@@ -1,0 +1,44 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Report detail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+
+    <img src={{selectedPet.photo}} />
+
+    <ion-card-content text-center>
+      <ion-card-title>
+        {{selectedPet.name}}
+      </ion-card-title>
+      <p>Owner:
+        {{selectedPet.ownername}}
+      </p>
+      <p>Phone:
+        {{selectedPet.phone}}
+      </p>
+      <p>Email
+        {{selectedPet.email}}
+      </p>
+      <p>LostLocation:
+        {{selectedPet.lostlocation}}
+      </p>
+      <p>LostTime:
+        {{selectedPet.losttime}}
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+      Albums
+      <ion-badge item-end>9</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,5 @@
+page-myreport-list {
+  .avatarcolor{
+    border: map_get($colors, danger) solid 2px;
+  }
+}

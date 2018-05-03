@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the ReportPetsPage page.
@@ -15,11 +16,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ReportPetsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    selectedPet: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+      this.selectedPet = navParams.get('pet');
   }
 
   ionViewDidLoad() {
+      //console.log(this.mydata.name);
     console.log('ionViewDidLoad ReportPetsPage');
   }
+    reportPets() {
+        this.loadingCtrl.create({
+            content: 'Now Reporting...',
+            duration: 700,
+            dismissOnPageChange: true
+        }).present();
+    }
 
 }

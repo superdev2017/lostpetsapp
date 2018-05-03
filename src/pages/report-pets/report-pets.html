@@ -1,18 +1,32 @@
-<!--
-  Generated template for the ReportPetsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Report Pets</ion-title>
+    <ion-title>Report Lost Pet</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <div class="center">
+    <img src={{selectedPet.photo}} />
+    </div>
+    <h6 text-center>{{selectedPet.name}}</h6>
+
+        <P><strong>Ownername: {{selectedPet.ownername}}</strong></P>
+        <p>Phone:{{selectedPet.phone}}</p>
+        <p>Email:{{selectedPet.email}}</p>
+        <p>LostLocation:{{selectedPet.lostlocation}}</p>
+  <ion-item>
+    <ion-input placeholder="Find Location"></ion-input>
+  </ion-item>
+  <ion-item padding-bottom>
+    <ion-input placeholder="Description"></ion-input>
+  </ion-item>
+
+    <button ion-button color="danger" (click)="reportPets()" class="center">
+      <ion-icon name='send'></ion-icon>
+      REPORT
+    </button>
 
 </ion-content>

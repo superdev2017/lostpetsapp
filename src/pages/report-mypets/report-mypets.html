@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Report Lost Pet</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div class="center">
+    <img src={{selectedPet.photo}} />
+
+    <h3 style="text-align:center "> {{selectedPet.name}}  </h3>
+
+     <p style="text-align: center"> {{selectedPet.description}} </p>
+    </div>
+
+  <ion-item>
+    <ion-input placeholder="Lost Location"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Description"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lost Date</ion-label>
+    <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lost Time</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon item-start name="logo-facebook" color="facebook"></ion-icon>
+    <ion-label>Facebook</ion-label>
+    <ion-checkbox item-end color="primary"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-icon item-start name="logo-twitter" color="twitter"></ion-icon>
+    <ion-label>Twitter</ion-label>
+    <ion-checkbox item-end color="primary"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-icon item-start name="logo-instagram" color="instagram"></ion-icon>
+    <ion-label>Instagram</ion-label>
+    <ion-checkbox item-end color="primary"></ion-checkbox>
+  </ion-item>
+
+    <button ion-button color="danger" (click)="reportmyPets()" class="center">
+      <ion-icon name='send'></ion-icon>
+      REPORT
+    </button>
+
+
+</ion-content>
