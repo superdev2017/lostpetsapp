@@ -1,0 +1,71 @@
+
+<!--<ion-header>
+    <ion-navbar>
+        <ion-title>{{pet.name}}</ion-title>
+    </ion-navbar>
+</ion-header>-->
+
+
+<ion-content>
+    <ion-fab top right>
+        <button ion-fab color="danger" mini (click)="showActionSheet()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+    <ion-grid text-center>
+        <ion-row padding="">
+            <ion-col text-center justify-content-center align-items-center>
+                <ion-avatar >
+                    <img [src]="pet.photo"/>
+                </ion-avatar>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-card-title>{{pet.name}}</ion-card-title>
+                <p>
+                    {{pet.state}}
+                </p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-item-group>
+        <ion-item-divider color="light" text-uppercase>About</ion-item-divider>
+        <ion-item>
+            Name
+            <ion-note item-end>
+                {{pet.name}}
+            </ion-note>
+        </ion-item>
+        <ion-item>
+            Sex
+            <ion-note item-end text-capitalize>
+                {{pet.sex}}
+            </ion-note>
+        </ion-item>
+
+        <ion-item>
+            Age
+            <ion-note item-end text-capitalize>
+                {{pet.age}}
+            </ion-note>
+        </ion-item>
+
+        <ion-item>
+            Weight
+            <ion-note item-end text-capitalize>
+                {{pet.weight}}Kg
+            </ion-note>
+        </ion-item>
+
+        <ion-item>
+            Size
+            <ion-note item-end text-capitalize>
+                {{pet.size}}
+            </ion-note>
+        </ion-item>
+
+        <ion-item>
+            {{pet.description}}
+        </ion-item>
+    </ion-item-group>
+</ion-content>

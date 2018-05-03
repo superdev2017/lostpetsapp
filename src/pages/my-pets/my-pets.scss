@@ -1,0 +1,17 @@
+page-my-pets {
+  ion-avatar img  {
+    width:100% !important;
+    height : 100% !important;
+    max-width: 80px !important;  //any size
+    max-height: 80px !important; //any size
+  },
+
+  .state-in {
+    color: map_get($colors, primary);
+  }
+  .state-lost {
+     color: map_get($colors, danger);
+  }
+}
+
+

@@ -1,0 +1,21 @@
+page-my-pet-edit {
+
+  .banner img{
+    /*background: url('/assets/imgs/thumbnail-empty.jpg');
+    position: absolute;
+    width: 100%;
+    background-size: 100px 100px;
+    content: ' ';*/
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+    margin-top: 30px;
+  }
+
+  textarea {
+    height: 60px;
+  }
+}

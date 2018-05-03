@@ -1,0 +1,28 @@
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Pets</ion-title>
+  </ion-navbar>
+
+</ion-header>-->
+
+
+<ion-content class="list-avatar-page">
+    <ion-fab  bottom right>
+        <button ion-fab color="vibrant" (click)="addPet()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
+
+    <ion-list no-lines>
+        <button ion-item *ngFor="let item of pets" (click)="gotoDetail($event, item)">
+            <ion-avatar item-start>
+                <img [class.avatarcolor] = "true" src="{{item.photo}}">
+            </ion-avatar>
+            <h2>{{item.name}}</h2>
+            <small class="state-{{item.state}}">{{item.state == 'in' ? 'Good' : 'Danger'}}</small>
+            <ion-badge item-end>{{item.notifies.length}}</ion-badge>
+            <button ion-button clear item-end><ion-icon md="md-person-add"></ion-icon></button>
+        </button>
+    </ion-list>
+
+</ion-content>

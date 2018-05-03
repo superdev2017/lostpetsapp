@@ -1,0 +1,89 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="type">
+            <ion-segment-button value="profile">
+                Profile
+            </ion-segment-button>
+            <ion-segment-button value="settings">
+                Settings
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>-->
+
+<ion-content padding>
+    <!--<ion-content>
+        <div [ngSwitch]="type">
+            <ion-list *ngSwitchCase="'profile'">
+
+            </ion-list>
+            <ion-list *ngSwitchCase="'settings'">
+
+            </ion-list>
+        </div>
+    </ion-content>-->
+
+    <ion-grid text-center>
+        <ion-row padding="">
+            <ion-col text-center justify-content-center align-items-center>
+                <ion-avatar >
+                    <img [src]="user.photo || './assets/imgs/thumbnail-empty.jpg'" (click)="getPicture()"/>
+                </ion-avatar>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-item-group>
+        <ion-item>
+            <ion-label floating>User Name</ion-label>
+            <ion-input type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Phone</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label  color="dark" floating>Address:</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark" floating>City</ion-label>
+            <ion-select>
+                <ion-option value="New York">New York</ion-option>
+                <ion-option value="Los Angeles">Los Angeles</ion-option>
+                <ion-option value="London">London</ion-option>
+                <ion-option value="Paris">Paris</ion-option>
+                <ion-option value="São Paulo">São Paulo</ion-option>
+                <ion-option value="Tokyo">Tokyo</ion-option>
+                <ion-option value="New Delhi">New Delhi</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="dark" floating>State</ion-label>
+            <ion-select>
+                <ion-option value="NY">NY</ion-option>
+                <ion-option value="CA">CA</ion-option>
+                <ion-option value="Greater London">Greater London</ion-option>
+                <ion-option value="Paris">Paris</ion-option>
+                <ion-option value="SP">SP</ion-option>
+                <ion-option value="Kantō">Kantō</ion-option>
+                <ion-option value="Delhi">Delhi</ion-option>
+            </ion-select>
+        </ion-item>
+        <button ion-button full >Save</button>
+    </ion-item-group>
+</ion-content>

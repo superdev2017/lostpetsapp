@@ -1,0 +1,1 @@
+ionic serve --port 4400 --livereload-port 35730 --dev-logger-port 53705
